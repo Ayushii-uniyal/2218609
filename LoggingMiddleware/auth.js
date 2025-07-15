@@ -1,4 +1,3 @@
-// auth.js
 const axios = require('axios');
 
 async function getAuthToken() {
@@ -15,13 +14,13 @@ async function getAuthToken() {
 
   try {
     const response = await axios.post(AUTH_URL, credentials);
-    console.log("✅ Access Token Received:");
+    console.log("Access Token Received:");
     console.log({
       token: response.data.access_token,
       type: response.data.token_type
     });
   } catch (error) {
-    console.error("❌ AUTH FAILED:", error.response?.data || error.message);
+    console.error("AUTH FAILED:", error.response?.data || error.message);
   }
 }
 

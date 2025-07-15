@@ -1,4 +1,3 @@
-// register.js
 const axios = require('axios');
 
 async function register() {
@@ -15,7 +14,7 @@ async function register() {
 
   try {
     const response = await axios.post(REGISTER_URL, registrationData);
-    console.log("✅ REGISTRATION SUCCESS! Save these credentials:");
+    console.log("REGISTRATION SUCCESS! Save these credentials:");
     console.log({
       clientID: response.data.clientID,
       clientSecret: response.data.clientSecret
